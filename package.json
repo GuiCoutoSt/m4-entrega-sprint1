@@ -1,0 +1,22 @@
+{
+  "name": "m4-entrega-sprint1",
+  "version": "1.0.0",
+  "description": "CRUD API W/ EXPRESS",
+  "main": "index.js",
+  "repository": "git@github.com:GuiCoutoSt/m4-entrega-sprint1.git",
+  "author": "Guilherme Couto <gcoutos95@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "sucrase": "^3.21.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "uuid": "^8.3.2"
+  }
+}
