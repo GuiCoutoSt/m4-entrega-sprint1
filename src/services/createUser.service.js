@@ -19,9 +19,9 @@ const createUserService = async (name, email, password, isAdm) => {
 
   usersDB.push(newUser);
 
-  const target = {};
+  const supportObject = {};
 
-  const responseUser = Object.assign(target, newUser);
+  const responseUser = Object.assign(supportObject, newUser);
 
   delete responseUser["password"];
 

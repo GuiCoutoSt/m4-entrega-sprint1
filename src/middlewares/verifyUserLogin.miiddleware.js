@@ -7,16 +7,14 @@ const verifyUserLoginMW = (req, res, next) => {
 
   const user = usersDB.find((user) => user.email === email);
 
-  console.log(user.password);
-
   if (!user) {
-    return res.status(401).json({ error: "Wrong email/password" });
+    return res.status(401).json({ message: "Wrong email/password" });
   }
 
   const passwordMatch = bcrypt.compareSync(password, user.password);
 
   if (!passwordMatch) {
-    return res.status(401).json({ error: "Wrong email/password" });
+    return res.status(401).json({ message: "Wrong email/password" });
   }
 
   next();

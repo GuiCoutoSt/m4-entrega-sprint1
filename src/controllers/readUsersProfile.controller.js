@@ -1,12 +1,13 @@
-import { response } from "express";
 import readUserProfileService from "../services/readUserProfile.service";
 
 const readUserProfileController = (req, res) => {
-  const { token } = req.headers.authorization;
+  let token = req.headers.authorization;
 
-  const findUser = readUserProfileService(token);
+  token = token.split(" ")[1];
 
-  return res.status(200).json(findUser);
+  const findedUser = readUserProfileService(token);
+
+  return res.status(200).json(findedUser);
 };
 
 export default readUserProfileController;
